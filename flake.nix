@@ -310,7 +310,7 @@
         default = import ./module.nix;
       };
       checks.x86_64-linux = {
-        e2e-test = pkgs.nixosTest {
+        e2e-test = pkgs.testers.nixosTest {
           name = "secrix-e2e-test";
           extraPythonPackages = p: [ p.termcolor ];
           nodes = {
